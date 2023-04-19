@@ -7,7 +7,7 @@
 using namespace std;
 
 struct CSR {
-	vector<double> val;
+	vector<FLOAT> val;
 	vector<int>	col_ind;
 	vector<int> row_ptr;
 	int row;
