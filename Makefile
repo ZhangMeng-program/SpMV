@@ -1,6 +1,6 @@
-CC = aarch64-linux-gnu-g++-4.8
-CFLAGS = -std=c++11 -O3 -march=armv8-a
-GEM5_FLAGS = -I/home/wangzicong/Projects/gem5-X/include -L/home/wangzicong/Projects/gem5-X/util/m5 -lm5
+CC = aarch64-linux-gnu-g++
+CFLAGS = -std=c++11 -O3 -march=armv8-a+sve
+GEM5_FLAGS = -I/home/user/xbyak_aarch64_handson/my-program/gem5/include -L/home/user/xbyak_aarch64_handson/my-program/gem5/util/m5/build/arm64/out -lm5
 
 all: float double static
 
