@@ -21,10 +21,11 @@ int EXECUTE_NUM = 1;
 
 void SpMV(CSRMatrix &csr, FLOAT *x, FLOAT *y)
 {
-	for (int i = 0; i < csr.row_ptr.size() - 1; i++)
+	int row = csr.row;
+	for (int i = 0; i < row; i++)
 	{
 		y[i] = 0;
-		for (int j = (csr.row_ptr[i] - 1); j < (csr.row_ptr[i + 1] - 1); j++)
+		for (int j = (csr.row_ptr[i]); j < (csr.row_ptr[i + 1]); j++)
 		{
 			y[i] += csr.values[j] * x[csr.col_idx[j] - 1];
 		}
