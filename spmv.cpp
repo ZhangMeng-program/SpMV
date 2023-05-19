@@ -27,7 +27,7 @@ void SpMV(CSRMatrix &csr, FLOAT *x, FLOAT *y)
 		y[i] = 0;
 		for (int j = (csr.row_ptr[i]); j < (csr.row_ptr[i + 1]); j++)
 		{
-			y[i] += csr.values[j] * x[csr.col_idx[j] - 1];
+			y[i] += csr.values[j] * x[csr.col_idx[j]];
 		}
 	}
 }
