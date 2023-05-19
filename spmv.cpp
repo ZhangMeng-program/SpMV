@@ -313,6 +313,12 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
+	if(mm_is_array(matcode))
+	{
+		printf("do not support the array matrix!\n");
+		exit(1);
+	}
+
     /* find out size of sparse matrix .... */
 
     if ((ret_code = mm_read_mtx_crd_size(f, &M, &N, &nz)) !=0)
