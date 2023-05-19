@@ -5,9 +5,7 @@
 #include "spm_allocated.h"
 #include "mmio.h"
 #include "mmio.c"
-#ifndef NATIVE
 #include "gem5/m5ops.h"
-#endif
 #include <arm_sve.h>
 
 #ifdef SP
