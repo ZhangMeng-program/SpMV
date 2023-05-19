@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <arm_sve.h>
 #include "matrix_format.h"
 #include "spm_allocated.h"
 #include "mmio.h"
 #include "mmio.c"
+#ifndef NATIVE
 #include "gem5/m5ops.h"
-#include <arm_sve.h>
+#endif
+
 
 #ifdef SP
 typedef float FLOAT;
